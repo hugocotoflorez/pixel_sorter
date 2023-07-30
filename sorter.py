@@ -7,10 +7,10 @@ with Image.open('image.jpg') as im:
     pixels = list(im.getdata())
 
     keys = {
-        'l':lambda px: 0.299*px[0] + 0.587*px[1] + 0.114*px[2] ,
-        'h':lambda px:(colorsys.rgb_to_hsv(*px)[0]) ,
-        's':lambda px:(colorsys.rgb_to_hsv(*px)[1]),
-        'v':lambda px:(colorsys.rgb_to_hsv(*px)[2])
+        'l':lambda px: 0.299*px[0] + 0.587*px[1] + 0.114*px[2] ,# luminosidad
+        'h':lambda px:(colorsys.rgb_to_hsv(*px)[0]) , #hue
+        's':lambda px:(colorsys.rgb_to_hsv(*px)[1]),#spectre
+        'v':lambda px:(colorsys.rgb_to_hsv(*px)[2])#vibrance
     }
     
     #SORT: 
